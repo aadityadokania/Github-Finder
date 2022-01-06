@@ -27,10 +27,13 @@ searchUser.addEventListener('keyup',(e) => {
                 //show profile
                 // console.log("he");
                 ui.showProfile(data.profile);
+                ui.showRepos(data.repos);
 
             }
-        })
+        }).catch((e)=>{
+            console.log(e);
 
+        })
     }else{
         //clear profile 
         ui.clearProfile();
